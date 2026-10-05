@@ -1,0 +1,28 @@
+# docker compose up  ->  app + API on http://localhost:8000, data in PostgreSQL
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: profitpilot
+      POSTGRES_PASSWORD: profitpilot
+      POSTGRES_DB: profitpilot
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U profitpilot"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      PP_DATABASE_URL: postgresql+psycopg://profitpilot:profitpilot@db:5432/profitpilot
+      PP_SEED_DEMO: "true"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

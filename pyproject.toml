@@ -1,0 +1,11 @@
+[project]
+name = "profitpilot"
+version = "1.0.0"
+description = "Pricing co-pilot for the new-to-online Meesho seller (Meesho DICE Challenge S3, Business Track). Illustrative data."
+requires-python = ">=3.9"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+filterwarnings = ["ignore::DeprecationWarning"]

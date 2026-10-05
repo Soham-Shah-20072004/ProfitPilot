@@ -1,0 +1,2670 @@
+{
+"scenarios": [
+{
+"scenario": "default",
+"mode": "growth",
+"id": "kurti",
+"key": "kurti:growth:369>384:up",
+"kind": "up",
+"from": 369,
+"to": 384,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "growth",
+"id": "lunch",
+"key": "lunch:growth:449>449:hold",
+"kind": "hold",
+"from": 449,
+"to": 449,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "growth",
+"id": "serum",
+"key": "serum:growth:249>259:up",
+"kind": "up",
+"from": 249,
+"to": 259,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "growth",
+"id": "romper",
+"key": "romper:growth:349>363:up",
+"kind": "up",
+"from": 349,
+"to": 363,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "growth",
+"id": "vase",
+"key": "vase:growth:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "cash",
+"id": "kurti",
+"key": "kurti:cash:369>339:dual",
+"kind": "dual",
+"from": 369,
+"to": 339,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "cash",
+"id": "lunch",
+"key": "lunch:cash:449>439:dual",
+"kind": "dual",
+"from": 449,
+"to": 439,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "cash",
+"id": "serum",
+"key": "serum:cash:249>239:dual",
+"kind": "dual",
+"from": 249,
+"to": 239,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "cash",
+"id": "romper",
+"key": "romper:cash:349>329:dual",
+"kind": "dual",
+"from": 349,
+"to": 329,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "cash",
+"id": "vase",
+"key": "vase:cash:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "margin",
+"id": "kurti",
+"key": "kurti:margin:369>389:up",
+"kind": "up",
+"from": 369,
+"to": 389,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "margin",
+"id": "lunch",
+"key": "lunch:margin:449>449:hold",
+"kind": "hold",
+"from": 449,
+"to": 449,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "margin",
+"id": "serum",
+"key": "serum:margin:249>249:hold",
+"kind": "hold",
+"from": 249,
+"to": 249,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "margin",
+"id": "romper",
+"key": "romper:margin:349>349:hold",
+"kind": "hold",
+"from": 349,
+"to": 349,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "margin",
+"id": "vase",
+"key": "vase:margin:499>499:hold",
+"kind": "hold",
+"from": 499,
+"to": 499,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "default",
+"mode": "clear",
+"id": "kurti",
+"key": "kurti:clear:369>349:down",
+"kind": "down",
+"from": 369,
+"to": 349,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "clear",
+"id": "lunch",
+"key": "lunch:clear:449>419:down",
+"kind": "down",
+"from": 449,
+"to": 419,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "clear",
+"id": "serum",
+"key": "serum:clear:249>239:down",
+"kind": "down",
+"from": 249,
+"to": 239,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "clear",
+"id": "romper",
+"key": "romper:clear:349>329:down",
+"kind": "down",
+"from": 349,
+"to": 329,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "default",
+"mode": "clear",
+"id": "vase",
+"key": "vase:clear:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "after_moves",
+"mode": "growth",
+"id": "kurti",
+"key": "kurti:growth:384>384:hold",
+"kind": "hold",
+"from": 384,
+"to": 384,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 384,
+"dsm": 0,
+"mpm": 1,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "growth",
+"id": "lunch",
+"key": "lunch:growth:449>449:hold",
+"kind": "hold",
+"from": 449,
+"to": 449,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "growth",
+"id": "serum",
+"key": "serum:growth:259>269:up",
+"kind": "up",
+"from": 259,
+"to": 269,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 259,
+"dsm": 8,
+"mpm": 1,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "after_moves",
+"mode": "growth",
+"id": "romper",
+"key": "romper:growth:349>349:hold",
+"kind": "hold",
+"from": 349,
+"to": 349,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 7,
+"mpm": 2,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "growth",
+"id": "vase",
+"key": "vase:growth:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "after_moves",
+"mode": "cash",
+"id": "kurti",
+"key": "kurti:cash:384>384:hold",
+"kind": "hold",
+"from": 384,
+"to": 384,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 384,
+"dsm": 0,
+"mpm": 1,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "cash",
+"id": "lunch",
+"key": "lunch:cash:449>439:dual",
+"kind": "dual",
+"from": 449,
+"to": 439,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "cash",
+"id": "serum",
+"key": "serum:cash:259>249:dual",
+"kind": "dual",
+"from": 259,
+"to": 249,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 259,
+"dsm": 8,
+"mpm": 1,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "cash",
+"id": "romper",
+"key": "romper:cash:349>349:hold",
+"kind": "hold",
+"from": 349,
+"to": 349,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 7,
+"mpm": 2,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "cash",
+"id": "vase",
+"key": "vase:cash:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "after_moves",
+"mode": "margin",
+"id": "kurti",
+"key": "kurti:margin:384>384:hold",
+"kind": "hold",
+"from": 384,
+"to": 384,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 384,
+"dsm": 0,
+"mpm": 1,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "margin",
+"id": "lunch",
+"key": "lunch:margin:449>449:hold",
+"kind": "hold",
+"from": 449,
+"to": 449,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "margin",
+"id": "serum",
+"key": "serum:margin:259>259:hold",
+"kind": "hold",
+"from": 259,
+"to": 259,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 259,
+"dsm": 8,
+"mpm": 1,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "margin",
+"id": "romper",
+"key": "romper:margin:349>349:hold",
+"kind": "hold",
+"from": 349,
+"to": 349,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 7,
+"mpm": 2,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "margin",
+"id": "vase",
+"key": "vase:margin:499>499:hold",
+"kind": "hold",
+"from": 499,
+"to": 499,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "clear",
+"id": "kurti",
+"key": "kurti:clear:384>384:hold",
+"kind": "hold",
+"from": 384,
+"to": 384,
+"F": 309,
+"k": 0.78,
+"Pe": 369,
+"Pn": 339,
+"gap": 30,
+"Fno": 277,
+"sm": 18,
+"arms": [
+299,
+339,
+369,
+399,
+429
+],
+"Fplus": 319,
+"Pm": 399,
+"frec": 283,
+"live": 384,
+"dsm": 0,
+"mpm": 1,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "clear",
+"id": "lunch",
+"key": "lunch:clear:449>419:down",
+"kind": "down",
+"from": 449,
+"to": 419,
+"F": 346,
+"k": 0.85,
+"Pe": 409,
+"Pn": 399,
+"gap": 10,
+"Fno": 332,
+"sm": 13,
+"arms": [
+359,
+399,
+409,
+439,
+469
+],
+"Fplus": 359,
+"Pm": 449,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "after_moves",
+"mode": "clear",
+"id": "serum",
+"key": "serum:clear:259>239:down",
+"kind": "down",
+"from": 259,
+"to": 239,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 259,
+"dsm": 8,
+"mpm": 1,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "after_moves",
+"mode": "clear",
+"id": "romper",
+"key": "romper:clear:349>349:hold",
+"kind": "hold",
+"from": 349,
+"to": 349,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 7,
+"mpm": 2,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "after_moves",
+"mode": "clear",
+"id": "vase",
+"key": "vase:clear:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 367,
+"k": 0.81,
+"Pe": 439,
+"Pn": 419,
+"gap": 20,
+"Fno": 344,
+"sm": 19,
+"arms": [
+369,
+419,
+439,
+479,
+519
+],
+"Fplus": 379,
+"Pm": 479,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "growth",
+"id": "kurti",
+"key": "kurti:growth:369>384:up",
+"kind": "up",
+"from": 369,
+"to": 384,
+"F": 374,
+"k": 0.71,
+"Pe": 424,
+"Pn": 374,
+"gap": 50,
+"Fno": 326,
+"sm": 29,
+"arms": [
+334,
+374,
+424,
+454,
+484
+],
+"Fplus": 389,
+"Pm": 489,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": {
+"cs": 220,
+"ret": 18,
+"rto": 11,
+"T": 50
+},
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "growth",
+"id": "lunch",
+"key": "lunch:growth:449>449:hold",
+"kind": "hold",
+"from": 449,
+"to": 449,
+"F": 340,
+"k": 0.85,
+"Pe": 403,
+"Pn": 393,
+"gap": 10,
+"Fno": 326,
+"sm": 13,
+"arms": [
+353,
+393,
+403,
+433,
+463
+],
+"Fplus": 359,
+"Pm": 439,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": {
+"cat": "decor"
+},
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "growth",
+"id": "serum",
+"key": "serum:growth:249>259:up",
+"kind": "up",
+"from": 249,
+"to": 259,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "growth",
+"id": "romper",
+"key": "romper:growth:349>363:up",
+"kind": "up",
+"from": 349,
+"to": 363,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "growth",
+"id": "vase",
+"key": "vase:growth:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 354,
+"k": 0.81,
+"Pe": 384,
+"Pn": 364,
+"gap": 20,
+"Fno": 331,
+"sm": 18,
+"arms": [
+324,
+364,
+384,
+414,
+444
+],
+"Fplus": 369,
+"Pm": 459,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": {
+"T": 30,
+"pack": 12
+},
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "cash",
+"id": "kurti",
+"key": "kurti:cash:369>319:dual",
+"kind": "dual",
+"from": 369,
+"to": 319,
+"F": 374,
+"k": 0.71,
+"Pe": 424,
+"Pn": 374,
+"gap": 50,
+"Fno": 326,
+"sm": 29,
+"arms": [
+334,
+374,
+424,
+454,
+484
+],
+"Fplus": 389,
+"Pm": 489,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": {
+"cs": 220,
+"ret": 18,
+"rto": 11,
+"T": 50
+},
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "cash",
+"id": "lunch",
+"key": "lunch:cash:449>439:dual",
+"kind": "dual",
+"from": 449,
+"to": 439,
+"F": 340,
+"k": 0.85,
+"Pe": 403,
+"Pn": 393,
+"gap": 10,
+"Fno": 326,
+"sm": 13,
+"arms": [
+353,
+393,
+403,
+433,
+463
+],
+"Fplus": 359,
+"Pm": 439,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": {
+"cat": "decor"
+},
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "cash",
+"id": "serum",
+"key": "serum:cash:249>239:dual",
+"kind": "dual",
+"from": 249,
+"to": 239,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "cash",
+"id": "romper",
+"key": "romper:cash:349>329:dual",
+"kind": "dual",
+"from": 349,
+"to": 329,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "cash",
+"id": "vase",
+"key": "vase:cash:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 354,
+"k": 0.81,
+"Pe": 384,
+"Pn": 364,
+"gap": 20,
+"Fno": 331,
+"sm": 18,
+"arms": [
+324,
+364,
+384,
+414,
+444
+],
+"Fplus": 369,
+"Pm": 459,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": {
+"T": 30,
+"pack": 12
+},
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "margin",
+"id": "kurti",
+"key": "kurti:margin:369>389:up",
+"kind": "up",
+"from": 369,
+"to": 389,
+"F": 374,
+"k": 0.71,
+"Pe": 424,
+"Pn": 374,
+"gap": 50,
+"Fno": 326,
+"sm": 29,
+"arms": [
+334,
+374,
+424,
+454,
+484
+],
+"Fplus": 389,
+"Pm": 489,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": {
+"cs": 220,
+"ret": 18,
+"rto": 11,
+"T": 50
+},
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "margin",
+"id": "lunch",
+"key": "lunch:margin:449>449:hold",
+"kind": "hold",
+"from": 449,
+"to": 449,
+"F": 340,
+"k": 0.85,
+"Pe": 403,
+"Pn": 393,
+"gap": 10,
+"Fno": 326,
+"sm": 13,
+"arms": [
+353,
+393,
+403,
+433,
+463
+],
+"Fplus": 359,
+"Pm": 439,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": {
+"cat": "decor"
+},
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "margin",
+"id": "serum",
+"key": "serum:margin:249>249:hold",
+"kind": "hold",
+"from": 249,
+"to": 249,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "margin",
+"id": "romper",
+"key": "romper:margin:349>349:hold",
+"kind": "hold",
+"from": 349,
+"to": 349,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "margin",
+"id": "vase",
+"key": "vase:margin:499>499:hold",
+"kind": "hold",
+"from": 499,
+"to": 499,
+"F": 354,
+"k": 0.81,
+"Pe": 384,
+"Pn": 364,
+"gap": 20,
+"Fno": 331,
+"sm": 18,
+"arms": [
+324,
+364,
+384,
+414,
+444
+],
+"Fplus": 369,
+"Pm": 459,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": {
+"T": 30,
+"pack": 12
+},
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "clear",
+"id": "kurti",
+"key": "kurti:clear:369>369:hold",
+"kind": "hold",
+"from": 369,
+"to": 369,
+"F": 374,
+"k": 0.71,
+"Pe": 424,
+"Pn": 374,
+"gap": 50,
+"Fno": 326,
+"sm": 29,
+"arms": [
+334,
+374,
+424,
+454,
+484
+],
+"Fplus": 389,
+"Pm": 489,
+"frec": 283,
+"live": 369,
+"dsm": 36,
+"mpm": 0,
+"ov": {
+"cs": 220,
+"ret": 18,
+"rto": 11,
+"T": 50
+},
+"pf": null
+},
+{
+"scenario": "cost_overrides",
+"mode": "clear",
+"id": "lunch",
+"key": "lunch:clear:449>419:down",
+"kind": "down",
+"from": 449,
+"to": 419,
+"F": 340,
+"k": 0.85,
+"Pe": 403,
+"Pn": 393,
+"gap": 10,
+"Fno": 326,
+"sm": 13,
+"arms": [
+353,
+393,
+403,
+433,
+463
+],
+"Fplus": 359,
+"Pm": 439,
+"frec": 317,
+"live": 449,
+"dsm": 60,
+"mpm": 0,
+"ov": {
+"cat": "decor"
+},
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "clear",
+"id": "serum",
+"key": "serum:clear:249>239:down",
+"kind": "down",
+"from": 249,
+"to": 239,
+"F": 166,
+"k": 0.84,
+"Pe": 199,
+"Pn": 189,
+"gap": 10,
+"Fno": 160,
+"sm": 6,
+"arms": [
+159,
+189,
+199,
+219,
+239
+],
+"Fplus": 179,
+"Pm": 219,
+"frec": 152,
+"live": 249,
+"dsm": 52,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "clear",
+"id": "romper",
+"key": "romper:clear:349>329:down",
+"kind": "down",
+"from": 349,
+"to": 329,
+"F": 266,
+"k": 0.8,
+"Pe": 319,
+"Pn": 299,
+"gap": 20,
+"Fno": 243,
+"sm": 14,
+"arms": [
+259,
+299,
+319,
+349,
+379
+],
+"Fplus": 279,
+"Pm": 349,
+"frec": 244,
+"live": 349,
+"dsm": 45,
+"mpm": 0,
+"ov": null,
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+},
+{
+"scenario": "cost_overrides",
+"mode": "clear",
+"id": "vase",
+"key": "vase:clear:499>469:down",
+"kind": "down",
+"from": 499,
+"to": 469,
+"F": 354,
+"k": 0.81,
+"Pe": 384,
+"Pn": 364,
+"gap": 20,
+"Fno": 331,
+"sm": 18,
+"arms": [
+324,
+364,
+384,
+414,
+444
+],
+"Fplus": 369,
+"Pm": 459,
+"frec": 260,
+"live": 499,
+"dsm": 40,
+"mpm": 0,
+"ov": {
+"T": 30,
+"pack": 12
+},
+"pf": [
+true,
+true,
+true,
+true,
+true,
+true
+]
+}
+],
+"lifecycle": {
+"kurti": {
+"P0": 369,
+"P1": 384,
+"Rv": 359,
+"Pm": 384,
+"doMatch": false,
+"M": [
+359,
+339,
+319
+],
+"hold": 819,
+"match": 739.44,
+"holdO": 14,
+"matchO": 15.8,
+"preO": 20,
+"ev": [
+[
+38,
+384
+],
+[
+52,
+384
+],
+[
+56,
+384
+],
+[
+140,
+359
+],
+[
+162,
+339
+],
+[
+176,
+319
+]
+],
+"ordPts": [
+[
+0,
+8
+],
+[
+15,
+14
+],
+[
+30,
+19
+],
+[
+36,
+23
+],
+[
+38,
+20
+],
+[
+52,
+20
+],
+[
+54,
+14
+],
+[
+56,
+14
+],
+[
+90,
+20
+],
+[
+105,
+19.1
+],
+[
+120,
+15.4
+],
+[
+130,
+10
+],
+[
+140,
+6.4
+],
+[
+155,
+4.5
+],
+[
+175,
+3.6
+],
+[
+180,
+2.7
+]
+],
+"w": {
+"launch": 30,
+"growth": 60,
+"maturity": 120,
+"decline": 155
+}
+},
+"lunch": {
+"P0": 432,
+"P1": 449,
+"Rv": 420,
+"Pm": 449,
+"doMatch": false,
+"M": [
+419,
+389,
+359
+],
+"hold": 700.4,
+"match": 657.9,
+"holdO": 8,
+"matchO": 9,
+"preO": 12,
+"ev": [
+[
+76,
+449
+],
+[
+104,
+449
+],
+[
+112,
+449
+],
+[
+280,
+419
+],
+[
+324,
+389
+],
+[
+352,
+359
+]
+],
+"ordPts": [
+[
+0,
+5
+],
+[
+30,
+8.7
+],
+[
+60,
+11.8
+],
+[
+72,
+14.3
+],
+[
+76,
+12
+],
+[
+104,
+12
+],
+[
+108,
+8
+],
+[
+112,
+8
+],
+[
+180,
+12
+],
+[
+210,
+11.5
+],
+[
+240,
+9.3
+],
+[
+260,
+6
+],
+[
+280,
+3.8
+],
+[
+310,
+2.7
+],
+[
+350,
+2.2
+],
+[
+360,
+1.6
+]
+],
+"w": {
+"launch": 60,
+"growth": 120,
+"maturity": 240,
+"decline": 310
+}
+},
+"serum": {
+"P0": 249,
+"P1": 259,
+"Rv": 242,
+"Pm": 249,
+"doMatch": true,
+"M": [
+239,
+229,
+219
+],
+"hold": 1484.28,
+"match": 1492.0079999999998,
+"holdO": 19,
+"matchO": 21.4,
+"preO": 27,
+"ev": [
+[
+57,
+259
+],
+[
+78,
+259
+],
+[
+84,
+249
+],
+[
+210,
+239
+],
+[
+243,
+229
+],
+[
+264,
+219
+]
+],
+"ordPts": [
+[
+0,
+10.4
+],
+[
+23,
+18.3
+],
+[
+45,
+24.8
+],
+[
+54,
+30
+],
+[
+57,
+26.7
+],
+[
+78,
+26.7
+],
+[
+81,
+19
+],
+[
+84,
+21.4
+],
+[
+135,
+30
+],
+[
+158,
+28.6
+],
+[
+180,
+23.2
+],
+[
+195,
+15
+],
+[
+210,
+9.5
+],
+[
+233,
+6.8
+],
+[
+263,
+5.5
+],
+[
+270,
+4.1
+]
+],
+"w": {
+"launch": 45,
+"growth": 90,
+"maturity": 180,
+"decline": 233
+}
+},
+"romper": {
+"P0": 349,
+"P1": 363,
+"Rv": 339,
+"Pm": 363,
+"doMatch": false,
+"M": [
+339,
+319,
+299
+],
+"hold": 698.4,
+"match": 670.64,
+"holdO": 9,
+"matchO": 10.1,
+"preO": 13,
+"ev": [
+[
+38,
+363
+],
+[
+52,
+363
+],
+[
+56,
+363
+],
+[
+140,
+339
+],
+[
+162,
+319
+],
+[
+176,
+299
+]
+],
+"ordPts": [
+[
+0,
+6.3
+],
+[
+15,
+11
+],
+[
+30,
+14.9
+],
+[
+36,
+18
+],
+[
+38,
+13.2
+],
+[
+52,
+13.2
+],
+[
+54,
+9
+],
+[
+56,
+9
+],
+[
+90,
+13.2
+],
+[
+105,
+12.6
+],
+[
+120,
+10.2
+],
+[
+130,
+6.6
+],
+[
+140,
+4.2
+],
+[
+155,
+3
+],
+[
+175,
+2.4
+],
+[
+180,
+1.8
+]
+],
+"w": {
+"launch": 30,
+"growth": 60,
+"maturity": 120,
+"decline": 155
+}
+},
+"vase": {
+"P0": 480,
+"P1": 499,
+"Rv": 467,
+"Pm": 499,
+"doMatch": false,
+"M": [
+469,
+439,
+409
+],
+"hold": 427.68,
+"match": 411.88500000000005,
+"holdO": 4,
+"matchO": 4.5,
+"preO": 6,
+"ev": [
+[
+63,
+499
+],
+[
+87,
+499
+],
+[
+93,
+499
+],
+[
+233,
+469
+],
+[
+270,
+439
+],
+[
+293,
+409
+]
+],
+"ordPts": [
+[
+0,
+2.1
+],
+[
+25,
+3.8
+],
+[
+50,
+5.1
+],
+[
+60,
+6.2
+],
+[
+63,
+5.5
+],
+[
+87,
+5.5
+],
+[
+90,
+4
+],
+[
+93,
+4
+],
+[
+150,
+5.5
+],
+[
+175,
+5.3
+],
+[
+200,
+4.3
+],
+[
+217,
+2.8
+],
+[
+233,
+1.8
+],
+[
+258,
+1.3
+],
+[
+292,
+1
+],
+[
+300,
+0.8
+]
+],
+"w": {
+"launch": 50,
+"growth": 100,
+"maturity": 200,
+"decline": 258
+}
+}
+}
+}
