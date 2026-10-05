@@ -48,4 +48,23 @@ def status() -> dict:
              "note": "learns online from outcomes; no offline training"},
         ],
         "models_dir": str(MODELS_DIR),
+        "ai": _ai_slots(),
     }
+
+
+def _ai_slots() -> list:
+    """LLM-served slots: Gemini when a key is set, else the rule / baseline backup named here."""
+    from ..ai.provider import ai_status
+    st = ai_status()
+    llm = f"{st['provider']} · {st['model']}" if st["active"] else None
+    return [
+        {"slot": "coach", "active": llm or "rule-based Coach (keyword routing + engine answers)",
+         "backup": "rule-based Coach", "note": "function-calling over 18 read-only engine tools; numbers grounded"},
+        {"slot": "listing_check", "active": llm or "keyword baseline", "backup": "keyword baseline",
+         "target": "CLIP image + text embeddings (planned); Gemini vision stands in until catalogue images are available"},
+        {"slot": "return_reasons", "active": llm or "keyword baseline", "backup": "keyword baseline",
+         "note": "AI labels; ProfitPilot counts"},
+        {"slot": "review_intelligence", "active": llm or "keyword baseline", "backup": "keyword baseline",
+         "target": "Indic-language topic model (2.0)"},
+        {"slot": "why_explainer", "active": llm or "templates", "backup": "templates", "note": "0 ungrounded ₹ (guard)"},
+    ]

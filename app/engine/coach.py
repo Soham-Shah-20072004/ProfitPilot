@@ -18,18 +18,18 @@ from .lifecycle import life_story
 from .recommend import recommend
 
 ROUTES = [
-    (r"phir bhi|still|cut", "cut"),
-    (r"orders kam|dropped|orders", "orders"),
-    (r"floor", "floor"),
-    (r"profit|kamai", "profit"),
-    (r"return", "returns"),
-    (r"compet|rival", "comp"),
-    (r"reorder|stock kab", "reorder"),
-    (r"badha|raise|increase|change|badal", "raise"),
-    (r"nahi bik|not selling|isn't selling", "nosell"),
-    (r"\bads?\b", "ads"),
-    (r"atak|stuck", "stuck"),
-    (r"kam|drop|low", "orders"),
+    (r"phir bhi|still|cut|ghata|घटा|कम कर", "cut"),
+    (r"orders kam|dropped|orders|ऑर्डर", "orders"),
+    (r"floor|फ्लोर|lagat|लागत", "floor"),
+    (r"profit|kamai|munafa|मुनाफ|कमाई|फायदा", "profit"),
+    (r"return|wapas|वापस|रिटर्न|rto", "returns"),
+    (r"compet|rival|dusre seller|प्रतिस्पर्ध", "comp"),
+    (r"reorder|stock kab|kitna maal|स्टॉक कब|दोबारा मंग", "reorder"),
+    (r"badha|raise|increase|change|badal|बढ़ा|बदल", "raise"),
+    (r"nahi bik|not selling|isn't selling|नहीं बिक", "nosell"),
+    (r"\bads?\b|vigyapan|विज्ञापन|ऐड", "ads"),
+    (r"atak|stuck|pada hai|अटका|पड़ा", "stuck"),
+    (r"kam|drop|low|कम", "orders"),
 ]
 
 CHIPS = {"orders": "My orders dropped", "profit": "How much profit?", "returns": "Why are returns coming?",
@@ -43,6 +43,17 @@ RULES = ["I never change a price, stock order or mode: only your tap does.",
          "I never show another seller's details.",
          "Money actions are tap-only, never voice.",
          "Expected means expected: no guarantees."]
+
+
+def signals_diag_input(p: Product):
+    """Diagnose input built from a product's weekly signals (used when no metric weeks were posted)."""
+    from .catalog import CATEGORIES
+    from .diagnose import DiagnoseInput, Peers, Week
+    g, cat = p.signals, CATEGORIES[p.category]
+    clicks = js_round(g.views * g.ctr / 100)
+    wk = Week(g.views, clicks, js_round(clicks * g.cvr / 100), p.ret, p.rto)
+    peers = Peers(4000, 4.0, 0.53, g.cvr_med or 3.0, max(0.3, 0.15 * (g.cvr_med or 3.0)), cat["ret"], cat["rto"], 6)
+    return DiagnoseInput(p.id, [wk, wk], peers, p.live_price, list(p.band), g.doi, 4.5)
 
 
 def route(text: str) -> Optional[str]:
@@ -83,35 +94,59 @@ def answer(intent: str, p: Product, mode: str = "growth", products: Optional[dic
         text = (f"Not right now: {r['h']}." if r["kind"] == "hold" else f"Yes: {r['h']}.") + f" Goal mode: {mode.upper()}."
         src, nx = f"Lifecycle engine ({p.signals.stage}) · bounded step ≤ 8%", ["profit", "comp"]
     elif intent == "reorder":
-        text = ("Your lunch box stock has reached the reorder point (12/day × 7 days + 18 safety = 102 units). "
-                "Order about 170 units (≈ 2 weeks of sales): ₹35,700 at ₹210, or join a pool at ₹188/unit once firm commitments reach 300 units.")
-        src, nx = "Inventory signals · 12 × 7 + 18 = 102", ["stuck", "profit"]
+        from .inventory import reorder_point
+        d = round(demand(p, price), 1)
+        rp = reorder_point(daily_demand=d, lead_time_days=7, sd_per_day=max(1.0, round(d * 0.34, 1)))
+        stock = js_round(p.signals.doi * d)
+        rop, q = js_round(rp["reorder_point"]), rp["order_quantity"]
+        if p.signals.doi > 60:
+            text = (f"Don't reorder the {p.name.lower()}: you have {p.signals.doi:g} days of stock, past the 60-day limit. "
+                    "Sell what you have first (bundle, then small markdowns above your floor).")
+        elif stock <= rop:
+            text = (f"Yes, reorder the {p.name.lower()} now. About {stock} units in stock vs a reorder point of {rop} "
+                    f"({to_fixed(d, 1)}/day × 7 days + {rp['safety_stock']} safety). Order about {q} units (≈ 2 weeks of sales): "
+                    f"{inr(q * p.cs)} at {inr(p.cs)} a piece.")
+        else:
+            text = (f"Not yet. About {stock} units of {p.name.lower()} in stock ({p.signals.doi:g} days); the reorder point is {rop} units "
+                    f"({to_fixed(d, 1)}/day × 7 days + {rp['safety_stock']} safety). I'll flag it when stock drops to {rop}.")
+        src, nx = f"Inventory engine · {p.name} · ROP = d × L + safety stock", ["stuck", "profit"]
     elif intent == "stuck":
-        vase = (products or {}).get("vase", p)
-        m = life_story(vase)
-        vf = floor_for(vase)
+        m = life_story(p)
         a, b, c, d = m["post_rival_price"], *m["markdowns"]
-        text = (f"Your vase has 73 days of stock (400 ÷ 5.5/day), past the 60-day limit. Bundle first. Then a markdown ladder in ≤ 8% steps: "
-                f"{inr(a)} → {inr(b)} → {inr(c)} → {inr(d)}, stopping above your floor {inr(vf.F)}. Below that only at Exit with your consent, "
-                f"never below {inr(vf.recovery_floor)}.")
-        src, nx = "Lifecycle engine (Decline) · 400 ÷ 5.5 = 73 days", ["reorder", "profit"]
-    elif intent == "orders":
-        text = ("I don't think you need to cut your price right now. Views are normal, but clicks are low (2.5% vs 4.0% for similar products, "
-                "2 weeks in a row). Shall we test a white-background main photo for 7 days at the same price? About ₹430 more a week (estimate).")
-        src, nx = "Diagnosis engine · last 2 weeks · 5,000 views", ["cut", "profit", "raise"]
-    elif intent == "cut":
-        sf = floor_for((products or {}).get("serum", p))
-        text = (f"₹199 is still above the serum floor {inr(sf.F)}, but a cut is allowed only when the price–value check fires. It hasn't: "
-                "the problem is clicks. −20% is also more than the 8% max step. Keep ₹249 and fix the photo instead.")
-        src, nx = "Panic Brake rules · example ₹199 (demo)", ["orders", "profit"]
-    elif intent == "nosell":
-        text = ("Let's see why first; price comes later. Views are under half of similar kurtis (1,800 vs 4,000). Listing score 72; it should be 80+. "
-                "Fix title and attributes before touching price. Impact is measured after 7 days.")
-        src, nx = "Diagnosis engine · visibility · last 7 days", ["ads", "cut"]
+        if p.signals.doi > 60:
+            text = (f"Your {p.name.lower()} has {p.signals.doi:g} days of stock, past the 60-day limit. Bundle first. Then a markdown ladder in ≤ 8% steps: "
+                    f"{inr(a)} → {inr(b)} → {inr(c)} → {inr(d)}, stopping above your floor {inr(f.F)}. Below that only at Exit with your consent, "
+                    f"never below {inr(f.recovery_floor)}.")
+            src = f"Lifecycle engine ({p.signals.stage}) · {p.signals.doi:g} days of stock"
+        else:
+            text = (f"Your {p.name.lower()} stock is not stuck: {p.signals.doi:g} days of stock (limit 60). No markdown needed. "
+                    f"If it ever passes 60 days: bundle first, then ≤ 8% steps, never below your floor {inr(f.F)}.")
+            src = f"Lifecycle engine ({p.signals.stage}) · days of stock"
+        nx = ["reorder", "profit"]
+    elif intent in ("orders", "nosell", "cut"):
+        from .diagnose import diagnose
+        dg = diagnose(signals_diag_input(p))
+        bad = [n for n in dg["nodes"] if n["status"] == "bad"]
+        if intent == "cut":
+            to = js_round(price * 0.92)
+            text = (f"A cut is allowed only if the diagnosis points to price, and only in ≤ 8% steps above your floor {inr(f.F)}. "
+                    + (f"Diagnosis: {dg['diagnosis']} First fix: {dg['action']}" if dg["bottleneck"] else
+                       f"All 8 signals look healthy, so a cut would just give away margin: at {inr(to)} you'd keep {inr(to - f.F)} per kept order instead of {inr(price - f.F)}.")
+                    + (" A price step is allowed here." if dg["price_move_allowed"] else " Keep the price for now."))
+        elif dg["bottleneck"]:
+            text = (f"Let's see why first; price comes later. {bad[0]['label']}: {bad[0]['value']}. {dg['diagnosis']} "
+                    f"First fix: {dg['action']} Impact is checked after 7 days.")
+        else:
+            text = (f"Your {p.name.lower()} looks healthy on all 8 signals ({dg['nodes'][0]['value']}; {dg['nodes'][1]['value']}). "
+                    f"No need to cut the price. {dg['action']}")
+        src, nx = f"Diagnosis engine · {p.name} · 8 signals, price last", ["profit", "raise", "comp"]
     elif intent == "ads":
-        text = ("Your kurti doesn't need more ads right now. Ads cost ₹12 per kept order, already in your floor. Ads make sense only while "
-                "ad ₹ per kept order is below your margin.")
-        src, nx = "Cost branch · ads attribution · last 7 days", ["nosell", "raise"]
+        ads = f.other_parts.get("ads", 0)
+        margin = price - f.F
+        text = (f"Ads already cost {inr(ads)} per kept order for your {p.name.lower()}, inside your floor {inr(f.F)}. "
+                f"You keep {inr(margin)} per kept order, so extra ads pay only while extra ad ₹ per kept order stays below {inr(margin)}. "
+                + ("Views are low, so a small, capped boost can help." if p.signals.views < 2000 else "Views are fine, so more ads aren't needed right now."))
+        src, nx = f"Cost branch · ads inside F · {p.name}", ["nosell", "raise"]
     else:
         return {"intent": None, "answer": "I can't answer that yet. Try one of these:", "source": None,
                 "next": [k for k in CHIPS if k not in ("cut", "floor")], "rules": RULES}

@@ -12,7 +12,7 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from . import __version__
-from .api import v1_admin, v1_core, v1_engines
+from .api import v1_admin, v1_ai, v1_core, v1_engines
 from .config import get_settings
 from .db import SessionLocal, init_db
 from .services.jobs import run_due
@@ -28,6 +28,9 @@ low orders before any discount, searches prices safely (one menu per day for eve
 suggestion with a Why: what, why, ₹ effect, confidence and undo.
 
 All numbers are **illustrative** (simulations and planning defaults), not real Meesho data.
+**AI layer (Gemini):** `POST /api/v1/coach/chat`, `/api/v1/ai/*`. Set `GEMINI_API_KEY` to turn it on; without it every
+AI feature falls back to the rule-based engine. The model explains; the engine decides every number.
+
 Start with `GET /api/v1/bootstrap`, `GET /api/v1/recommendations` and `GET /api/v1/products/kurti/lifecycle`.
 """
 
@@ -59,7 +62,7 @@ def create_app() -> FastAPI:
     app = FastAPI(title="ProfitPilot API", version=__version__, description=DESCRIPTION, lifespan=lifespan,
                   docs_url="/docs", redoc_url="/redoc", openapi_url="/api/v1/openapi.json")
     app.add_middleware(CORSMiddleware, allow_origins=s.cors_origins, allow_methods=["*"], allow_headers=["*"])
-    for r in (v1_core.router, v1_engines.router, v1_admin.router):
+    for r in (v1_core.router, v1_engines.router, v1_ai.router, v1_admin.router):
         app.include_router(r, prefix="/api/v1")
 
     @app.get("/api", include_in_schema=False)

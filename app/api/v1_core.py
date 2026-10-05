@@ -33,7 +33,13 @@ def health(db: Session = Depends(get_db)):
     s = get_settings()
     return {"status": "ok", "service": "profitpilot", "version": __version__,
             "database": "postgresql" if s.database_url.startswith("postgres") else "sqlite",
-            "server_time": now(db).isoformat(), "illustrative_data": True}
+            "server_time": now(db).isoformat(), "illustrative_data": True, "ai": _ai_brief()}
+
+
+def _ai_brief() -> dict:
+    from ..ai.provider import ai_status
+    st = ai_status()
+    return {"active": st["active"], "provider": st["provider"], "model": st["model"]}
 
 
 @router.get("/categories", tags=["meta"])
